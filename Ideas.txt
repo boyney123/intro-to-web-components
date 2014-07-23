@@ -1,0 +1,76 @@
+* Current semantic markup
+	- We all used to div/span/p (etc) this stuff we see all the time
+	- With Web componenets what if I told you.....
+	- What if I told you that <david-boyne/> is valid markup?
+	- Result is a picture and text of myself
+	- Today I will talk about 
+		- what makes up web components?
+		- Where did it all start and why would we use them?
+		- Custom Elements
+		- HTML imports
+		- Templates
+		- Shadow DOM
+		- How to get started today with some examples
+* Introduction
+	- Who am I?
+	- Picture....
+* What are web components?
+	- Modules
+	- Encapsulation
+	- Reuseble
+	- Widgets
+	- Native to browsers (in the future)
+	- Domain language in HTML
+	- Readable and maintainble
+* Where did it all start?
+	- Talk about WC3 spec? Talk about the things individually?
+	- Browser support
+* Web components is broken into 5 differnt things
+	- Web components
+	- Custom elements
+		- Semantic markup
+	- HTML imports
+		- Sharing components and importing them in browser
+	- Templates
+		- 
+	- Shadow DOM
+		- Great for the encapsulation
+		- Example is shadow dom for adverts
+		- Maximeriser used !important to fight our styles
+
+//Talk through each one slowly
+
+* Web components
+* Custom elements
+* HTML imports
+* Templates
+* Shadow DOM
+
+- How to get started today
+	- BOSONIC
+	- POLYMER
+	- POLYMER.DART
+	- XTAG
+- Discover
+	- Component Kitchen
+	- Customelements.io
+	- Web components.org
+
+- Be ready for the future....
+	- Why its important
+
+- Good/Bad and Ugly to finish
+- Further reading
+
+
+//Joke ideas
+//Welcome WC image...
+
+IDEAS
+*************************************************
+
+* ctm-element, david-boyne elements, show element from components kitchen
+* DHS/DSH (Domain specific html) not sofas!
+* Polymer vs Native?
+* Tweet about chrome update with web component support
+* I NEED CODE EXAMPLES!!!	

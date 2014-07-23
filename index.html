@@ -42,24 +42,148 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
+			<section>
+				<h2>Let me introduce you to Web Components</h2>
+			</section>
+
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h2>HTML Component</h2>
+					<pre><code data-trim contenteditable>
+	//Write up example of a widget we use today
+
+	&lt;div class=&quot;toolbar&quot;&gt;
+
+		&lt;ul class=&quot;toolbar-item-wrapper&quot;&gt;
+
+		 &lt;li class=&quot;toolbar-item&quot;&gt;Spanner&lt;/li&gt;	
+
+		&lt;/ul&gt;
+
+	&lt;/div&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>JavaScript Component</h2>
+					<pre><code>
+$(function() {
+    $( "#from" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 3,
+      onClose: function( selectedDate ) {
+        $( "#to" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#to" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 3,
+      onClose: function( selectedDate ) {
+        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+  });
+					</code></pre>
+				</section>
+
+				<section>
+				<h2>Valid markup</h2>
+					<pre><code>
+&lt;david-boyne&gt;&lt;/david-boyne&gt;
+
+&lt;twitter-user&gt;&lt;/twitter-user&gt;
+
+&lt;github-repo&gt;&lt;/github-repo&gt;
+
+&lt;bar-chart&gt;&lt;/bar-chart&gt;
+
+&lt;youtube-embed&gt;&lt;/youtube-embed&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Whats covered in this brownbag</h2>
+					<ul>
+						<li class="fragment">What are Web Components?</li>
+						<li class="fragment">Where did it all start and why would we use them?</li>
+						<li class="fragment">Custom elements</li>
+						<li class="fragment">HTML imports</li>
+						<li class="fragment">Templates</li>
+						<li class="fragment">Shadow DOM</li>
+						<li class="fragment">How to get started today</li>
+					</ul>
+				</section>
+
+				<section data-background="./imgs/WC.jpg">
+					<h1>Introduction to WC</h1>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Created <a href="http://twitter.com/boyney123">@boyney123</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+					<h2>Brownbag</h2>
+					<img src="./imgs/gifs/brownbag.gif" alt="">
 
 					<aside class="notes">
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
+				</section>
+
+				<section>
+					<h2>Who am I?</h2>
+					<p>Photo</p>
+				</section>
+
+				<section>
+					<h2>History of Web Components</h2>
+					<p>Trolley</p>
+				</section>
+				
+				<section>
+					<h2>HTML Imports</h2>
+				</section>
+
+				<section>
+					<h2>Templates</h2>
+				</section>
+
+				<section>
+					<h2>Shadow DOM</h2>
+				</section>
+
+				<section>
+					<h2>Custom Elements</h2>
+				</section>
+
+				<section>
+					<h2>HTML Imports + Templates + Shadow DOM + Custom elements = Web Components</h2>
+				</section>
+
+
+				<section>
+					<h2>What are Web Components?</h2>
+					<ul>
+						<li>Custom Elements</li>
+						<li>HTML Imports</li>
+						<li>Templates</li>
+						<li>Shadow DOM</li>
+					</ul>
+				</section>
+
+	
+				<section data-background="./imgs/chromesupport.png">
+				</section>
+
+				<section>
+					<h2>Browser Support</h2>
+					<img src="./imgs/support.PNG" alt="">
+
+					<div>
+						<a href="http://jonrimmer.github.io/are-we-componentized-yet/"><small>Are we componentized yet?</small></a>
+					</div>
 				</section>
 
 				<!-- Example of nested vertical slides -->
