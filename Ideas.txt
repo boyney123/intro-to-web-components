@@ -25,7 +25,9 @@
 * Where did it all start?
 	- Talk about WC3 spec? Talk about the things individually?
 	- Browser support
+
 * Web components is broken into 5 differnt things
+
 	- Web components
 	- Custom elements
 		- Semantic markup
@@ -74,3 +76,106 @@ IDEAS
 * Polymer vs Native?
 * Tweet about chrome update with web component support
 * I NEED CODE EXAMPLES!!!	
+
+* 11% of americans think HTML is an STD
+//http://time.com/12410/11-of-americans-think-html-is-an-std/
+
+* At the start of the internet/web everything seemed so simple. Our Javascript was basic and was used on for form validation and some fancy alerts.
+Over the years our browsers become more and more capable of allowing us to add more content and more javascript to the page, and now days we have thousdands and thousdands of JS in our applications.
+
+* jQuery was introduced at some point and every could do some really cool things, like DOM manipulating and made things slide left to right. Fade in and out, hide and show elements. It was great
+
+* But as time went on we keep adding jQuery and javascript to our websites and it leads to what is known today as spag code.
+
+* jQuery created jQuery UI to tackle this issue. Why dont we have a libary of widgets that everybody could use and donate too. But they stil required shit loads of JavaScript to be added to our pages
+
+* Now we litter our pages with JavaScript and Huge CSS files. But I think something better is coming/
+
+* Now we have HTML5! loads of new things come with HTML5, localstorage, audio, media (etc) but doesnt really solve this issue 
+(picture of what the html bird?)
+
+* What if we clean up the litter and have everything more componentised? What if we could encapulate our HTML and share components with each other without bloating our pages? 
+
+* I introduce to to webcomponents (WC slide)
+
+* Web components started back in 2010 when the early specs come out and its come along way since then. Today im going to talk about XYZ.
+
+Before I do I need to tell you about the issues we have today with HTML, CSS and JavaScript as they stand.
+
+Take a standard select element. We use this element today and it has options. We can disable the element and enable it, we can give it options and the browser understands it and knows how to render it. This element has been around since the start. So why do we still use it? Its clean encapsulated and does what it needs to do.
+
+So whats the problem?
+
+Well lets look at some navigation. Every website tackle navigation differntly, and many websites have the same type of navigation. But why is the markup all differnt?
+
+Some might use jQuery, some backbone, some EXT, some bootstrap etc. Its a mess. So many options and so many differnt ways of doing the same thing. If we do this it means our HTML, CSS could become messy, and if we are not careful our HTML has no semantic meaning. How do we know what the element is doing? 
+As a Dev how do I know how to use this element?
+
+(image of confused person)
+
+What if I told you we could do this? x-tabs. (this is where custom elements come in)
+
+Over the fast few years, I always hear and read about certain problems with software engineering. Things getting over complicated or has to many dependencies. Or not readable, maintainable and understandable. IN HTML, CSS and JavaScript all of this can happen very easily. And the solution for many things is just to keep things simple modular and encapsulated. (microservices, node modules, architecture.) 
+Web components will help us get that easily.
+
+"Its easy to write code a browser understands. Good devs write code people can understand" - Addy osmani
+
+"Web components are a set of emerging standards that allow us to extend HTML with our own vocabally"
+
+Web components are in a way simular to a team of people. We have BA, QA, PO, PM, Dev, all work well in a team but can work very on their own. Thats the same with web components
+
+(get piss up shot of the team....)
+
+(SHCT - turd picture)
+
+Templates
+	Allow use to use templates without javascript
+Custom elements
+	Allow us to extend HTML and use our own custom tags making HTML more domain spefic to our needs.
+Shadow Dom
+	Allows us to encapuslate our CSS into differnt components. Scope DOM and CSS
+HTML Imports
+	Import in HTML. Package together the logic for a component so we can start using in a page (JS, CSS and HTML)
+
+So matrix of web components from 2013 to 2014 (on Eric talk on Polymer and WebComponents change everything)
+(Platform status page for IE. Look at templateelement, custom element, html imports and shadowdom)
+
+But with polymer you get all support in all modern browsers for the APIS.
+
+Some examples of some webcomponents
+	- Talk about how easy they are to understand and use. Dont need to know anything behind the scenes but you can look or change.
+
+Native WebComponents
+	- Show tweet about 30 million users will have it
+	- How to create a native component today, registerElement
+	- Need a - in the element name so standards can continue with non dash so no clashes in future...
+
+Webcomponents are easy to use and team can use them without knowing HTML, CSS or Javascript.
+
+Example
+- My CTM components used on home and mmotor could of been an element
+- meerkat elements
+- david-boyne element. Hover over does something else
+
+
+(links in slide for element examples)
+
+-----------------------------
+Eric Bidelman
+
+- Eric been doing for a couple of years now, watch his slides to get to know more.
+
+- "Thinking in components for the future
+	- Change the way we think about writing code
+	- Share code between teams and companies
+	- Dont rewrite the wheel
+	- Get more done with less....
+
+- Github use custom elements <local-time> is a web componet, using polymer
+- ChromeOS keyboard is a web component
+- Media player in chromeOS is a web component
+
+
+
+Problems Web components solve
+- Look at markup from gmail... look at the divs and classes. What does it mean? How can we understand that?
