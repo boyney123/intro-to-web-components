@@ -1,0 +1,99 @@
+:host {
+  display: block;
+}
+
+:host img {
+  width:25%;
+  border:5px solid grey;
+}
+
+/* To ensure your styling works under the Shadow DOM polyfill, see
+   www.polymer-project.org/docs/polymer/styling.html#directives */
+polyfill-next-selector { content: ':host > h2'; }
+::content h2 {
+  color: blue;
+}
+
+polyfill-next-selector { content: ':host > h2'; }
+::content h2 {
+  color: blue;
+}
+
+
+#DIV_1 {
+    color: rgb(255, 255, 255);
+    height: 52px;
+    position: relative;
+    text-decoration: none solid rgb(255, 255, 255);
+    width: 691.1875px;
+    perspective-origin: 405.1875px 71.1875px;
+    transform-origin: 405.1875px 71.1875px;
+    background: rgb(21, 54, 104) -webkit-gradient(linear, 0% 0, 0% 100%, from(rgb(21, 54, 104)), to(rgb(40, 102, 196))) repeat scroll 0% 0% / auto padding-box border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px 8px 8px 8px;
+    font: normal normal normal 13px/21px HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 12px 0px 0px 14px;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 28.796875px 57.59375px 57.59375px;
+}/*#DIV_1*/
+
+#DIV_1:after {
+    bottom: -21px;
+    color: rgb(255, 255, 255);
+    left: 87px;
+    position: absolute;
+    text-decoration: none solid rgb(255, 255, 255);
+    perspective-origin: 20.5px 12px;
+    transform-origin: 20.5px 12px;
+    content: '';
+    border-top: 24px solid rgb(40, 102, 196);
+    border-right: 41px solid rgba(0, 0, 0, 0);
+    border-bottom: 0px solid rgb(40, 102, 196);
+    border-left: 0px solid rgba(0, 0, 0, 0);
+    font: normal normal normal 13px/21px HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_1:after*/
+
+#DIV_1:before {
+    bottom: -25px;
+    color: rgb(255, 255, 255);
+    left: 85px;
+    position: absolute;
+    text-decoration: none solid rgb(255, 255, 255);
+    perspective-origin: 20.5px 12px;
+    transform-origin: 20.5px 12px;
+    content: '';
+    border-top: 24px solid rgb(255, 255, 255);
+    border-right: 41px solid rgba(0, 0, 0, 0);
+    border-bottom: 0px solid rgb(255, 255, 255);
+    border-left: 0px solid rgba(0, 0, 0, 0);
+    font: normal normal normal 13px/21px HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_1:before*/
+
+#H1_2 {
+    color: rgb(255, 255, 255);
+    height: 35px;
+    text-decoration: none solid rgb(255, 255, 255);
+    width: 691.1875px;
+    perspective-origin: 345.59375px 17.5px;
+    transform-origin: 345.59375px 17.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal 25px/35.4900016784668px HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#H1_2*/
+
+#P_3 {
+    color: rgb(255, 255, 255);
+    height: 17px;
+    text-decoration: none solid rgb(255, 255, 255);
+    width: 691.1875px;
+    perspective-origin: 345.59375px 8.5px;
+    transform-origin: 345.59375px 8.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal 14px/17.875px HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#P_3*/
+
