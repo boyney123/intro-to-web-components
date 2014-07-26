@@ -2,24 +2,6 @@
   display: block;
 }
 
-:host img {
-  width:25%;
-  border:5px solid grey;
-}
-
-/* To ensure your styling works under the Shadow DOM polyfill, see
-   www.polymer-project.org/docs/polymer/styling.html#directives */
-polyfill-next-selector { content: ':host > h2'; }
-::content h2 {
-  color: blue;
-}
-
-polyfill-next-selector { content: ':host > h2'; }
-::content h2 {
-  color: blue;
-}
-
-
 #NAV_1 {
     box-shadow: rgba(0, 0, 0, 0.2) 1px 6px 9px 0px;
     color: rgb(255, 255, 255);
@@ -36,7 +18,7 @@ polyfill-next-selector { content: ':host > h2'; }
     outline: rgb(255, 255, 255) none 0px;
 }/*#NAV_1*/
 
-#OL_2 {
+#ctm-nav-bar {
     color: rgb(255, 255, 255);
     height: 45px;
     position: relative;

@@ -7,11 +7,30 @@
   <script src="../platform/platform.js"></script>
   <link rel="import" href="ctm-nav-bar.html">
 
+  <style type="text/css">
+  	ol{
+  		font-size: 1.5em;
+  	}
+  	#ctm-nav-bar{
+  		background:green;
+  		color:red;
+  	}
+  </style>
+
 </head>
 <body unresolved>
 
   <h2>An example of using <code>&lt;ctm-nav-bar></code>:</h2>
 
+  <h2>Basic Navigation</h2>
+  <ol id="ctm-nav-bar">
+  	<li>Home</li>
+  	<li>Motor</li>
+  	<li>Maret</li>
+  	<li>Life</li>
+  </ol>
+
+  <h2>Small classes and IDs but using Shadow DOM</h2>
   <ctm-nav-bar test="ehelo" tabs='[{"name": "John"}, {"name": "Bob"}]'>
   </david-boyne>
 

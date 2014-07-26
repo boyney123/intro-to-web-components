@@ -103,6 +103,10 @@
 			</section>
 
 			<section>
+				<h2>TODO: Examples of old websites</h2>
+			</section>
+
+			<section>
 				<h2>Browsers matured</h2>
 				<img src="./imgs/browsers.jpg" alt="">
 				<aside class="notes">
@@ -129,6 +133,10 @@
 			</section>
 
 			<section>
+				<h2>Examples of jquery widgets</h2>
+			</section>
+
+			<section>
 				<h2>Keep adding more and more...</h2>
 				<img src="./imgs/gifs/moreandmore.gif" alt="">
 				<aside class="notes">
@@ -141,9 +149,12 @@
 				<h2 style="color: #1EFC5C;">Junk and huge applications</h2>
 			</section>
 
+			<section>
+				<h2>Our HTML, CSS can become messy...FAST</h2>
+			</section>
 
 			<section>
-				<h2>Gmail</h2>
+				<h2>Example : Gmail</h2>
 				<aside class="notes">
 						The DOM nodes cant be understand. Everything here is hard to understand meaning its hard to maintain
 				</aside>
@@ -195,6 +206,8 @@
 				</aside>
 			</section>
 
+			<section data-background="./imgs/wcstart.png"></section>
+
 			<section>
 				<h2>What does it solve?</h2>
 			</section>
@@ -234,9 +247,23 @@
 
 			<section>
 				<h2>Common solution in software</h2>
+				<ul>
+					<li class="fragment">Keep things simple</li>
+					<li class="fragment">Modular</li>
+					<li class="fragment">Encapsulated</li>
+					<li class="fragment">Single Responsibility</li>
+				</ul>
 				<aside class="notes">
 					Creating modular and reuseable components of a system. Single responbility and encapulatsed code base.
 				</aside>
+			</section>
+
+			<section>
+				<h2>What is Web Components build up from?</h2>
+			</section>
+
+			<section>
+				<h2>Web components is simular to a team...</h2>
 			</section>
 
 			<section data-background="./imgs/team.png">
@@ -246,71 +273,154 @@
 			</section>
 
 			<section>
-				<h2>This is simular to Web Components</h2>
-			</section>
-
-			<section>
-				<h2>Four Components</h2>
+				<h2>Web Components are build from</h2>
 				<h1>S.H.C.T</h1>
 			</section>
 
 			<section>
-				<h2>Web Components</h2>
+				<h2>Four Building Blocks</h2>
 				<ul>
 					<li class="fragment">S - Shadow DOM</li>
-					<li class="fragment">H - HTML IMPORT</li>
+					<li class="fragment">H - HTML Imports</li>
 					<li class="fragment">C - Custom Elements</li>
 					<li class="fragment">T - Templates</li>
 				</ul>
 			</section>
 
 			<section>
-				<h2>Shadow Dom</h2>
-				<p>Encapsulating the CSS and DOM</p>
+				<h2><span style="color:red">S</span>.H.C.T</h2>
+				<img src="./imgs/gifs/excited.gif">
+				<h3>Shadow DOM</h3>
 			</section>
 
 			<section>
-				<h2>HTML Import</h2>
-				<p>Importing/Exporting and sharing HTML</p>
+				<h2>Example : Shadow DOM</h2>
+				<a href="http://localhost:8000/components/ctm-nav-bar/demo.html">Demo</a>
 			</section>
 
 			<section>
-				<h2>Custom Elements</h2>
-				<p>DSH</p>
+				<h2>Key Facts : Shadow DOM</h2>
+				<ul>
+					<li class="fragment">DOM and CSS Scoping</li>
+					<li class="fragment">Allows us to design apps in small chunks with a guarante</li>
+					<li class="fragment">You can use class names and IDs within the scope without conflict</li>
+					<li class="fragment">Powerful - No more !important from third parties</li>
+				</ul>
 			</section>
 
 			<section>
-				<h2>Templates</h2>
-				<p>Not rendered in DOM</p>
+				<h2>S.<span style="color:red">H</span>.C.T</h2>
+				<h2>HTML Imports</h2>
 			</section>
 
 			<section>
-				<h2>Examples</h2>
-			</section>
-
-			<section>
-				<h2>Examples</h2>
-				<code><pre>&lt;david-boyne radius=&quot;20&quot; width=&quot;10&quot;&gt;&lt;/david-boyne&gt;</pre></code>
-				<a href="http://localhost:8000/components/david-boyne/demo.html" target="_blank">Demo</a>
-
-				<code><pre>&lt;ctm-speech-bubble title=&quot;Welcome!&quot; body=&quot;Welcome to comparethemarket.com&quot;&gt;&lt;/ctm-speech-bubble&gt;</pre></code>
+				<h2>Example : HTML Import</h2>
+				<code><pre>
+&lt;link rel=&quot;import&quot; href=&quot;ctm-speech-bubble.html&quot;&gt;
+				</pre></code>
 				<a href="http://localhost:8000/components/ctm-speech-bubble/demo.html" target="_blank">Demo</a>
-				
-				<code><pre>&lt;david-boyne radius=&quot;20&quot; width=&quot;10&quot;&gt;&lt;/david-boyne&gt;</pre></code>
+			</section>
+
+			<section>
+				<h2>Key Facts: HTML Import</h2>
+				<ul>
+					<li class="fragment">Bundle JS/HTML/CSS together</li>
+					<li class="fragment">Dependency management to web components</li>
+					<li class="fragment">All depdencies are replaced with a simple import</li>
+					<li class="fragment">Great to share and use components</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>S.H.<span style="color:red;">C</span>.T</h2>
+				<h2>Custom Elements</h2>
+			</section>
+
+			<section>
+				<h2>Example : Custom Element</h2>
+				<code>
+					<pre>
+&lt;ctm-speech-bubble title=&quot;Hello&quot; body='Hello and welcome to my brownbag session on Web Components'&gt;&lt;/ctm-speech-bubble&gt;
+					</pre>
+				</code>
+				<code>
+					<pre>
+&lt;ctm-nav-bar tabs='[{&quot;name&quot;: &quot;Home&quot;}, {&quot;name&quot;: &quot;Motor&quot;}]'&gt;<br/>  &lt;/ctm-nav-bar&gt;
+					</pre>
+				</code>
+				<a href="http://localhost:8000/components/ctm-speech-bubble/demo.html" target="_blank">Demo</a>
+			</section>
+
+			<section>
+				<h2>Key Facts: Custom Elements</h2>
+				<ul>
+					<li class="fragment">Readable</li>
+					<li class="fragment">Meaningful HTML</li>
+					<li class="fragment">DSH</li>
+				</ul>
+				<aside class="notes">
+					You can inherit elements. 
+				</aside>
+			</section>
+
+			<section>
+			<h2>Sofa Sales..</h2>
+				<img src="./imgs/sofa.jpg">
+				<aside class="notes">
+					Not talking about some kind of sofa sales
+				</aside>
+			</section>
+
+			<section>
+				<h2>D.S.H</h2>
+				<h3>Domain Specific HTML</h3>
+				<code>
+					<pre>
+&lt;ctm-speech-bubble title=&quot;Hello&quot; body='Hello and welcome to my brownbag session on Web Components'&gt;&lt;/ctm-speech-bubble&gt;
+					</pre>
+				</code>
+				<code>
+					<pre>
+&lt;ctm-nav-bar tabs='[{&quot;name&quot;: &quot;Home&quot;}, {&quot;name&quot;: &quot;Motor&quot;}]'&gt;<br/>  &lt;/ctm-nav-bar&gt;
+					</pre>
+				</code>
+			</section>
+
+			<section>
+				<h2>S.H.C.<span style="color:red;">T</span></h2>
+				<h2>Templates</h2>
+			</section>
+
+
+			<section>
+				<h2>Example : Template</h2>
+				<code>
+					<pre>
+&lt;template&gt;<br/><br/>    &lt;link rel=&quot;stylesheet&quot; href=&quot;david-boyne.css&quot; /&gt;<br/>    <br/>    &lt;img style=&quot;border-radius: {{radius}}%; width: {{width}}%&quot; src=&quot;./david-boyne.jpg&quot; alt=&quot;&quot;&gt;<br/><br/>  &lt;/template&gt;
+					</pre>
+				</code>
 				<a href="http://localhost:8000/components/david-boyne/demo.html" target="_blank">Demo</a>
+				<aside class="notes">
+					h1 shadow dom
+					Image and css wont be loaded in until the element is called and used.
+				</aside>
 			</section>
 
 			<section>
-				<h2>David Boyne element</h2>
+				<h2>Key Facts : Templates</h2>
+				<ul>
+					<li class="fragment">Parsed not rendered - does nothing until you use it</li>
+					<li class="fragment">Elements inside are not requests/used until its needed (i.e img, video tag)</li>
+					<li class="fragment">Out of scope - DOM doesnt even look at at</li>
+				</ul>
 			</section>
 
 			<section>
-				<h2>My Account Banner</h2>
+				<h2>Browser Support?</h2>
+				<img src="./imgs/gifs/oldbrowser.gif">
 			</section>
 
-			<section>
-				<h2>Support for Web Components</h2>
-				<p>	TODO: Show some browser support</p>
+			<section data-background="./imgs/support2013.png">
 			</section>
 
 			<section data-background="./imgs/chromesupport.png">
@@ -321,33 +431,43 @@
 					<img src="./imgs/gifs/dude.gif" alt="">
 			</section>
 
+			<section data-background="./imgs/support2014.png">
+			</section>
+
+			<section data-background="./imgs/supportpolymer.png">
+			</section>
+
 			<section>
-				<h2>Whos using Web Components?</h2>
+				<h2>What about old browsers?</h2>
+			</section>
+
+			<section>
+				<h2>Screw old browsers</h2>
+				<img src="./imgs/gifs/scewie.gif" width="50%">
+			</section>
+			
+
+			<section>
+				<h2>Whos using Web Components today?</h2>
 				<ul>
-					<li>GitHub uses custom elements local-time using polymer</li>
-					<li>ChromeOS keyboard is a web component</li>
-					<li>Media player in chromeOS is a web component</li>
+					<li class="fragment">GitHub uses custom elements local-time using polymer</li>
+					<li class="fragment">ChromeOS keyboard is a web component</li>
+					<li class="fragment">Media player in ChromeOS is a web component</li>
 				</ul>
 			</section>
 
 			<section>
-				<h2>Tools to get started today</h2>
+				<h2>How can you use Web Components today?</h2>
 				<ul>
-					<li>Polymer (Google)</li>
-					<li>X-Tags (Mozilla)</li>
-					<li>Vanilla JS</li>
+					<li class="fragment">Vanilla JS</li>
+					<li class="fragment">Polymer (Google)</li>
+					<li class="fragment">X-Tags (Mozilla)</li>
+					<li class="fragment">Bosonic (?)</li>
 				</ul>
 			</section>
 
 			<section>
-				<h2>Polymer</h2>
-				<p>Polyfills that will get deprecated</p>
-			</section>
-
-			
-			
-			<section>
-				<h2>Resources</h2>
+				<h2>More resources</h2>
 			</section>
 
 			<section data-background="./imgs/resource1.PNG">
@@ -366,13 +486,15 @@
 				</aside>
 			</section>
 
-			<section>	
-				<h2>The Future</h2>
+			<section>
+			<h2>Summary</h2>	
+				<h3>The Past, Future and Evolution</h3>
 				<ul>
 					<li class="fragment">Thinking Component</li>
 					<li class="fragment">Change the way we think about writing HTML, CSS and JavaScript</li>
 					<li class="fragment">Don't recreate the wheel</li>
 					<li class="fragment">Get more done with less</li>
+					<li class="fragment">More pictures of me wasted...</li>
 				</ul>
 			</section>
 
