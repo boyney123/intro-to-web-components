@@ -102,11 +102,11 @@
 			<section data-background="./imgs/oldpc.jpg">
 			</section>
 
-			<section>
-				<h2>TODO: Examples of old websites</h2>
-			</section>
+			<section data-background="./imgs/yahoo.png"></section>
 
-			<section>
+			<section data-background="./imgs/bbc.png"></section>
+
+				<section>
 				<h2>Browsers matured</h2>
 				<img src="./imgs/browsers.jpg" alt="">
 				<aside class="notes">
@@ -114,26 +114,47 @@
 				</aside>
 			</section>
 
+			<section data-background="./imgs/bbc2.png"></section>
+
 			<section>
-				<h2>jQuery</h2>
+				<img src="./imgs/jquery.png">
 				<aside class="notes">
 					jQuery was introduced at some point and every could do some really cool things, like DOM manipulating and made things slide left to right. Fade in and out, hide and show elements. It was great
 				</aside>
 			</section>
 
 			<section>
-				<h2>jQuery was abused</h2>
-			</section>
-
-			<section>
-				<h2>jQuery added jQuery UI</h2>
+				<h2>jQuery UI was added</h2>
+				<code>
+					<pre>
+$(function() {
+    $( "#accordion" )
+      .accordion({
+        header: "> div > h3"
+      })
+      .sortable({
+        axis: "y",
+        handle: "h3",
+        stop: function( event, ui ) {
+          // IE doesn't register the blur when sorting
+          // so trigger focusout handlers to remove .ui-state-focus
+          ui.item.children( "h3" ).triggerHandler( "focusout" );
+ 
+          // Refresh accordion to handle new order
+          $( this ).accordion( "refresh" );
+        }
+      });
+  });
+					</pre>
+				</code>
 				<aside class="notes">
 					jQuery created jQuery UI to tackle this issue. Why dont we have a libary of widgets that everybody could use and donate too. But they stil required shit loads of JavaScript to be added to our pages
 				</aside>
 			</section>
 
 			<section>
-				<h2>Examples of jquery widgets</h2>
+				<h2>jQuery was abused</h2>
+				<img src="./imgs/jqueryabuse.jpg">
 			</section>
 
 			<section>
@@ -150,21 +171,19 @@
 			</section>
 
 			<section>
-				<h2>Our HTML, CSS can become messy...FAST</h2>
+				<h2>Our HTML, CSS can become messy...</h2>
+				<h2 class="fragment">FAST!</h2>
 			</section>
 
-			<section>
-				<h2>Example : Gmail</h2>
+			<section data-background="./imgs/gmail.png">
 				<aside class="notes">
-						The DOM nodes cant be understand. Everything here is hard to understand meaning its hard to maintain
+						GMAIL: The DOM nodes cant be understand. Everything here is hard to understand meaning its hard to maintain
 				</aside>
 			</section>
 
 			<section>
-				<h2>Tidy up</h2>
-				<aside class="notes">
-						We litter our pages, but I think something better is coming for us.
-				</aside>
+				<h2>Confused...</h2>
+				<img src="./imgs/gifs/confused.gif">
 			</section>
 
 			<section>
@@ -177,9 +196,11 @@
 
 			<section>
 				<h2>What If?</h2>
-				<aside class="notes">
-						What if we clean up the litter and have everything more componentised? What if we could encapulate our HTML and share components with each other without bloating our pages? 
-				</aside>
+				<ul>
+					<li class="fragment">We could change the way we think and write HTML, CSS and JS?</li>
+					<li class="fragment">We could clean up the mess and have everything componentised?</li>
+					<li class="fragment">We could encapsulate our HTML and share components without bloating our pages?</li>
+				</ul>
 			</section>
 			
 			<section data-background="./imgs/intro.jpg">
@@ -214,6 +235,16 @@
 
 			<section>
 				<h2>Select Element</h2>
+				<code>
+					<pre>	
+&lt;select disabled&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+					</pre>
+				</code>
 				<aside class="notes">
 					Take this standard element that has been used from the start. We can easily understand what it does and has been used from teh start and used everywhere on the web.
 				</aside>
@@ -228,21 +259,153 @@
 			</section>
 
 			<section>
-				<h2>TODO: Differnt exdamples of how we could do a tab system (img confused person)?</h2>
+				<h2>Ext.js</h2>
+				<code>
+					<pre>
+Ext.require('Ext.tab.*');
+
+Ext.onReady(function(){
+    // basic tabs 1, built from existing content
+    var tabs = Ext.createWidget('tabpanel', {
+        renderTo: 'tabs1',
+        width: 450,
+        activeTab: 0,
+        defaults :{
+            bodyPadding: 10
+        },
+        items: [{
+            contentEl:'script', 
+            title: 'Short Text',
+            closable: true
+        },{
+            contentEl:'markup', 
+            title: 'Long Text'
+        }]
+    });
+    
+    // second tabs built from JS
+    var tabs2 = Ext.createWidget('tabpanel', {
+        renderTo: document.body,
+        activeTab: 0,
+        width: 600,
+        height: 250,
+        plain: true,
+        defaults :{
+            autoScroll: true,
+            bodyPadding: 10
+        },
+        items: [{
+                title: 'Normal Tab',
+                html: "My content was added during construction."
+            },{
+                title: 'Ajax Tab 1',
+                loader: {
+                    url: 'ajax1.htm',
+                    contentType: 'html',
+                    loadMask: true
+                },
+                listeners: {
+                    activate: function(tab) {
+                        tab.loader.load();
+                    }
+                }
+            },{
+                title: 'Ajax Tab 2',
+                loader: {
+                    url: 'ajax2.htm',
+                    contentType: 'html',
+                    autoLoad: true,
+                    params: 'foo=123&bar=abc'
+                }
+            },{
+                title: 'Event Tab',
+                listeners: {
+                    activate: function(tab){
+                        alert(tab.title + ' was activated.');
+                    }
+                },
+                html: "I am tab 4's content. I also have an event listener attached."
+            },{
+                title: 'Disabled Tab',
+                disabled: true,
+                html: "Can't see me cause I'm disabled"
+            }
+        ]
+    });
+});
+					</pre>
+				</code>
+			</section>
+
+			<section>
+				<h2>jQuery Tabs</h2>
+				<code>	
+						<pre>
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;jQuery UI Tabs - Default functionality&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css&quot;&gt;
+  &lt;script src=&quot;//code.jquery.com/jquery-1.10.2.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;//code.jquery.com/ui/1.11.0/jquery-ui.js&quot;&gt;&lt;/script&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/resources/demos/style.css&quot;&gt;
+  &lt;script&gt;
+  $(function() {
+    $( &quot;#tabs&quot; ).tabs();
+  });
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div id=&quot;tabs&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#tabs-1&quot;&gt;Nunc tincidunt&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tabs-2&quot;&gt;Proin dolor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tabs-3&quot;&gt;Aenean lacinia&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div id=&quot;tabs-1&quot;&gt;
+    &lt;p&gt;Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;tabs-2&quot;&gt;
+    &lt;p&gt;Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;tabs-3&quot;&gt;
+    &lt;p&gt;Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.&lt;/p&gt;
+    &lt;p&gt;Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+ 
+&lt;/body&gt;
+&lt;/html&gt;	
+						</pre>
+				</code>
+			</section>
+
+			<section>
+				<h2>Bootstrap</h2>
+				<code>
+					<pre>
+&lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+					</pre>
+				</code>
 			</section>
 
 			<section>
 				<h2>Repeating ourselfs</h2>
+				<img src="./imgs/gifs/repeat.gif">
 				<aside class="notes">
 						Differnt approuchs to create the same thing (tabs, jQuery, etc). As Devs how can we understand this?
 				</aside>
 			</section>
 
-			<section data-background="./imgs/confused2.jpg">
-			</section>
-
 			<section>
-				<p>This is valid (show valid markup for nav-bar) : Code EXAMPLE</p>
+					<h3>Web components could solve this problem</h3>
 			</section>
 
 			<section>
@@ -501,33 +664,6 @@
 			<section data-background="./imgs/questions.jpg">
 			</section>
 		
-
-				<section>
-					<h2>HTML Component</h2>
-					<pre><code data-trim contenteditable>
-	//Write up example of a widget we use today
-
-	&lt;div class=&quot;toolbar&quot;&gt;
-
-		&lt;ul class=&quot;toolbar-item-wrapper&quot;&gt;
-
-		 &lt;li class=&quot;toolbar-item&quot;&gt;Spanner&lt;/li&gt;	
-
-		&lt;/ul&gt;
-
-	&lt;/div&gt;
-					</code></pre>
-				</section>
-
-	
-				<section>
-					<h2>Browser Support</h2>
-					<img src="./imgs/support.PNG" alt="">
-
-					<div>
-						<a href="http://jonrimmer.github.io/are-we-componentized-yet/"><small>Are we componentized yet?</small></a>
-					</div>
-				</section>
 
 			</div>
 
